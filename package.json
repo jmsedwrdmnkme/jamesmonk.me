@@ -2,9 +2,9 @@
   "name": "jamesmonk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
@@ -36,8 +36,8 @@
     "gulp-sitemap": "^8.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^5.1.0",
-    "sass": "^1.105.1",
-    "webpack": "^5.111.1",
+    "sass": "^1.105.2",
+    "webpack": "^5.112.0",
     "webpack-stream": "^7.0.0"
   }
 }
