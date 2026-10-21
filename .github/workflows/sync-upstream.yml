@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  UPSTREAM_URL: https://github.com/jmsedwrdmnkme/jamesmonk.me
+  UPSTREAM_URL: https://github.com/jmsedwrdmnkme/front-end-boilerplate
   UPSTREAM_BRANCH: main
   SYNC_BRANCH: upstream-sync
 
