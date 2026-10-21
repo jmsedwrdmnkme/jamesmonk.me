@@ -222,15 +222,15 @@ function favicon() {
   return src(paths.favicon.src, {encoding: false})
     .pipe(
       favicons({
-        appName: 'Front End Boilerplate',
-        appShortName: 'FEB',
-        appDescription: 'Modern, optimised, minimal front end boilerplate; installed and kept up to date via PNPM.',
+        appName: 'James Monk | Multi Award Winning Front-End Developer',
+        appShortName: 'James Monk',
+        appDescription: 'Multiple Digital Impact Award winning, 18+ years experience. WordPress and Shopify expert. Background education in typography and design.',
         developerName: 'James Monk',
-        developerURL: 'https://github.com/jmsedwrdmnkme/front-end-boilerplate',
+        developerURL: 'https://github.com/jmsedwrdmnkme/jamesmonk.me',
         background: '#020307',
         theme_color: '#020307',
         path: 'favicons/',
-        url: 'http://localhost:3000',
+        url: 'https://jamesmonk.me',
         display: 'standalone',
         orientation: 'portrait',
         scope: '/',
@@ -251,7 +251,7 @@ function favicon() {
 function sitemaps() {
   return src([`${paths.html.dest}*.html`], { read: false })
     .pipe(sitemap({
-      siteUrl: 'http://localhost:3000',
+      siteUrl: 'https://jamesmonk.me',
       fileName: 'sitemap.xml',
       changefreq: 'weekly',
       priority: function(siteUrl, loc) {
