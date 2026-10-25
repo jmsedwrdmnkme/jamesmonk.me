@@ -1,31 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
 
-<title>Front End Boilerplate | James Monk</title>
+  <meta name="description" content="{{ meta-title }}">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="{{ meta-title }}">
+  <meta property="og:url" content="https://jamesmonk.me">
+  <meta property="og:image" content="https://jamesmonk.me/img/favicon.svg">
 
-<meta name="description" content="Minimal front end boilerplate, kept up to date via Node package manager.">
-<meta name="keywords" content="front end, development, html5, css3, web development, gulp, node, npm">
-<meta property="og:title" content="Front end boilerplate">
-<meta property="og:type" content="website">
-<meta property="og:description" content="Minimal front end boilerplate, kept up to date via Node package manager.">
-<meta property="og:url" content="http://localhost:3000">
-<meta property="og:image" content="http://localhost:3000/favicons/android-chrome-512x512.png">
+  {{> favicon }}
 
-{{> favicon }}
-
-<link rel="stylesheet" href="/css/main.css">
-
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-
-<header>
-  <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
-  <h1>Header</h1>
-</header>
-
-<main id="main">
-

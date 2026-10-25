@@ -1,0 +1,145 @@
+{{> header title='Nutrition calculator' meta-title='Calculate your nutrition: Calories, protein, carbs, fats and more - for fat loss or muscle gain.' keywords="nutrition, calculator, protein, carbs, fats, fibre, fat loss, muscle gain, recomp, bodybuilding" }}
+
+<header>
+  <h1>Nutrition calculator</h1>
+</header>
+
+<main id="nutrition" class="d-lg-flex gap-5">
+  <form class="col-lg">
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-sex">Sex</label>
+      <div class="col-md-8">
+        <select class="form-select" id="sex" aria-describedby="label-sex" aria-label="Sex">
+          <option value="man" selected>Man</option>
+          <option value="woman">Woman</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-age" for="age">Age</label>
+      <div class="col-md-8">
+        <input class="form-control" id="age" type="number" placeholder="30" aria-describedby="label-age" aria-label="Age">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-height" for="height">Height</label>
+      <div class="col-md-8">
+        <div class="input-group">
+          <input class="form-control" id="height" type="number" placeholder="180" aria-describedby="label-height" aria-label="Height (cm)">
+          <span class="input-group-text">cm</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-weight" for="weight">Weight</label>
+      <div class="col-md-8">
+        <div class="input-group">
+          <input class="form-control" id="weight" type="number" placeholder="80" aria-describedby="label-weight" aria-label="Weight (kg)">
+          <span class="input-group-text">kg</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-activity" for="activity">Activity</label>
+      <div class="col-md-8">
+        <select class="form-select" id="activity" aria-describedby="label-activity" aria-label="Activity level">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Light</option>
+          <option value="1.55" selected>Moderate</option>
+          <option value="1.725">Heavy</option>
+          <option value="1.9">Very heavy</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-physique" for="physique">Physique</label>
+      <div class="col-md-8">
+        <select class="form-select" id="physique" aria-describedby="label-physique" aria-label="Physique">
+          <option value="shredded">Shredded</option>
+          <option value="lean" selected>Lean/Athletic</option>
+          <option value="chubby">Carrying a little fat</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-md-4 col-form-label" id="label-goal" for="goal">Goal</label>
+      <div class="col-md-8">
+        <select class="form-select" id="goal" aria-describedby="label-goal" aria-label="Goal">
+          <option value="losefat">Lose fat</option>
+          <option value="maintain" selected>Maintain</option>
+          <option value="gain">Gain muscle</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-3 align-items-center">
+      <label class="col col-form-label" id="label-options" for="showManualOptions">Show advanced options</label>
+      <div class="col-auto">
+        <input class="form-check-input border-2 border-primary" id="showManualOptions" type="checkbox" aria-describedby="label-options" aria-label="Show advanced options" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="row mt-3 px-2 pt-3 bg-success text-light">
+      <label class="col-md-4 col-form-label" id="label-tdee" for="manualCalories">TDEE</label>
+      <div class="col-md-8">
+        <div class="input-group">
+          <input class="form-control" id="manualCalories" type="number" placeholder="0" aria-describedby="label-tdee" aria-label="TDEE calories">
+          <span class="input-group-text">kcals</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row py-3 px-2 bg-success text-light">
+      <label class="col-md-4 col-form-label" id="label-refeed" for="refeed">Refeeds</label>
+      <div class="col-md-8">
+        <div class="input-group">
+          <input class="form-control" id="refeed" type="number" placeholder="0" aria-describedby="label-refeed" aria-label="Refeed days">
+          <span class="input-group-text">days a week</span>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-primary col-lg mt-3">
+    <thead hidden>
+      <tr>
+        <th scope="col">Nutrition</th>
+        <th scope="col">Recommended</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Calories</th><td><span class="calories"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Protein</th><td><span class="protein"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Carbs</th><td><span class="carbs"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Sugar</th><td><span class="sugar"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Fibre</th><td><span class="fibre"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Fats</th><td><span class="fats"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Saturated fat</th><td><span class="saturated"></span></td>
+      </tr>
+      <tr>
+        <th scope="row">Omega 3</th><td><span class="omega"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
+{{> footer scripts=true }}
